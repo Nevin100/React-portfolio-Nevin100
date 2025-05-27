@@ -1,7 +1,7 @@
 
-# ✨ Nevin's Dev Dojo – The OG Portfolio
+# ✨ My Dev Dojo – The OG Portfolio
 
-Welcome to **Nevin's Dev Dojo** – the one where it all began!  
+Welcome to **My Dev Dojo** – the one where it all began!  
 This is my **first-ever developer portfolio**, built using **React.js** and styled with the magic of **Tailwind CSS**. It's not perfect, but it's got that nostalgic charm and battle scars from my early coding days. 🚀
 
 > ⚠️ Disclaimer: This portfolio is around a year old". Still live, still proud!
