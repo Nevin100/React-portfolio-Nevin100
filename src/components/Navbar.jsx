@@ -94,7 +94,6 @@ function Navbar() {
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-zinc-900/95 backdrop-blur-md shadow-lg flex flex-col items-center py-6 space-y-6 text-xl font-medium lg:hidden z-20">
           {[
-            "Home",
             "About",
             "Technologies",
             "Experience",
