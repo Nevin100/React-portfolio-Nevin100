@@ -81,7 +81,7 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Hamburger Icon - Mobile */}
+      {/* Hamburger Icon - Mobile  */}
       <button
         onClick={toggleMenu}
         className="lg:hidden text-3xl text-purple-400 focus:outline-none z-30"
