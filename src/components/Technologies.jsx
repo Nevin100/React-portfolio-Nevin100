@@ -134,18 +134,18 @@ export default function Technologies() {
           <div className="absolute top-0 right-0 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
 
           {/* Heading */}
-          <h2 className="my-16 text-center text-6xl py-10 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow-md">
+          <h2 className="my-16 text-center text-4xl lg:text-6xl py-10 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow-md">
             Technologies & Skills
           </h2>
 
           {/* Skill Sections */}
           {sections.map(({ title, items }, idx) => (
             <section key={idx} className="mb-16">
-              <h3 className="text-center text-3xl font-semibold mb-8 bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent drop-shadow-md">
+              <h3 className="text-center text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent drop-shadow-md">
                 {title}
               </h3>
 
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 sm:gap-8 px-4 place-items-center">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 px-2 sm:px-4 place-items-center">
                 {items.map(({ Icon, name, color, emoji }, i) => (
                   <motion.div
                     key={i}
@@ -158,15 +158,17 @@ export default function Technologies() {
                       repeat: Infinity,
                       repeatType: "reverse",
                     }}
-                    className="flex flex-col items-center space-y-2 rounded-3xl border-4 cursor-pointer border-neutral-800 p-6 select-none text-center w-28 hover:border-purple-500 transition-transform duration-300"
+                    className="flex flex-col items-center space-y-2 rounded-2xl border-4 cursor-pointer border-neutral-800 p-4 sm:p-6 w-24 sm:w-28 hover:border-purple-500 transition-transform duration-300"
                     title={name}
                   >
                     {Icon ? (
-                      <Icon className={`text-7xl ${color}`} />
+                      <Icon className={`text-5xl sm:text-6xl ${color}`} />
                     ) : (
-                      <span className={`text-7xl ${color}`}>{emoji}</span>
+                      <span className={`text-5xl sm:text-6xl ${color}`}>
+                        {emoji}
+                      </span>
                     )}
-                    <span className="text-sm text-neutral-300 font-medium">
+                    <span className="text-xs sm:text-sm text-neutral-300 font-medium text-center">
                       {name}
                     </span>
                   </motion.div>

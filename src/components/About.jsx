@@ -57,7 +57,7 @@ export default function About() {
 
           {/* Title with updated gradient colors */}
           <h2
-            className="text-6xl md:text-6xl font-bold mb-10
+            className="text-6xl text-center md:text-6xl font-bold mb-10
                        bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400
                        bg-clip-text text-transparent drop-shadow-md"
           >
