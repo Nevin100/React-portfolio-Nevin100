@@ -1,11 +1,44 @@
 import { useState } from "react";
 import logo from "../assets/NevinLogo.png";
-import { FaLinkedin, FaGithubSquare, FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+} from "react-icons/fa";
 import { Link } from "react-router-dom";
+
+const socialIcons = [
+  {
+    href: "https://www.instagram.com/nevin_bali_777?igsh=bHh4Z2RpdWRyYXdj",
+    label: "Instagram",
+    icon: <FaInstagram />,
+    hoverColor: "hover:text-pink-400",
+  },
+  {
+    href: "https://www.linkedin.com/in/nevinbali1012/",
+    label: "LinkedIn",
+    icon: <FaLinkedin />,
+    hoverColor: "hover:text-blue-400",
+  },
+  {
+    href: "https://github.com/Nevin100",
+    label: "GitHub",
+    icon: <FaGithub />,
+    hoverColor: "hover:text-gray-300",
+  },
+  {
+    href: "mailto:nevinbali10@mail.com",
+    label: "Email",
+    icon: <FaEnvelope />,
+    hoverColor: "hover:text-red-400",
+  },
+];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
@@ -17,48 +50,41 @@ function Navbar() {
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex gap-9 items-center text-xl font-medium">
-        <Link to="/" className="hover:text-purple-400 transition">
-          Home
-        </Link>
-        <Link to="/about" className="hover:text-purple-400 transition">
-          About
-        </Link>
-        <Link to="/technologies" className="hover:text-purple-400 transition">
-          Technologies
-        </Link>
-        <Link to="/experience" className="hover:text-purple-400 transition">
-          Experience
-        </Link>
-        <Link to="/opensource" className="hover:text-purple-400 transition">
-          Activities
-        </Link>
-        <Link to="/projects" className="hover:text-purple-400 transition">
-          Projects
-        </Link>
-        <Link to="/contact" className="hover:text-purple-400 transition">
-          Contact
-        </Link>
-        <a
-          href="https://github.com/Nevin100"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-2xl hover:text-purple-400 transition"
-          aria-label="GitHub Profile"
-        >
-          <FaGithubSquare />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/nevin-bali-aa744a2b6/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-2xl hover:text-purple-400 transition"
-          aria-label="LinkedIn Profile"
-        >
-          <FaLinkedin />
-        </a>
+        {[
+          "Home",
+          "About",
+          "Technologies",
+          "Experience",
+          "Activities",
+          "Projects",
+        ].map((item) => (
+          <Link
+            key={item}
+            to={`/${item.toLowerCase()}`}
+            className="hover:text-purple-400 transition"
+          >
+            {item}
+          </Link>
+        ))}
+
+        {/* Social Icons - Desktop */}
+        <div className="flex gap-4 text-2xl ml-4">
+          {socialIcons.map(({ href, label, icon, hoverColor }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className={`transition-transform duration-300 hover:scale-110 ${hoverColor}`}
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
       </div>
 
-      {/* Hamburger Icon - mobile */}
+      {/* Hamburger Icon - Mobile */}
       <button
         onClick={toggleMenu}
         className="lg:hidden text-3xl text-purple-400 focus:outline-none z-30"
@@ -70,76 +96,38 @@ function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-zinc-900/95 backdrop-blur-md shadow-lg flex flex-col items-center py-6 space-y-6 text-xl font-medium lg:hidden z-20">
-          <Link
-            to="/"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            to="/technologies"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Technologies
-          </Link>
-          <Link
-            to="/experience"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Experience
-          </Link>
-          <Link
-            to="/opensource"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Activities
-          </Link>
-          <Link
-            to="/projects"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Projects
-          </Link>
-          <Link
-            to="/contact"
-            className="hover:text-purple-400 transition"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
-          <div className="flex gap-6 text-3xl mt-4">
-            <a
-              href="https://github.com/Nevin100"
-              target="_blank"
-              rel="noopener noreferrer"
+          {[
+            "Home",
+            "About",
+            "Technologies",
+            "Experience",
+            "Activities",
+            "Projects",
+          ].map((item) => (
+            <Link
+              key={item}
+              to={`/${item.toLowerCase()}`}
               className="hover:text-purple-400 transition"
-              aria-label="GitHub Profile"
               onClick={() => setIsOpen(false)}
             >
-              <FaGithubSquare />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/nevin-bali-aa744a2b6/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-purple-400 transition"
-              aria-label="LinkedIn Profile"
-              onClick={() => setIsOpen(false)}
-            >
-              <FaLinkedin />
-            </a>
+              {item}
+            </Link>
+          ))}
+
+          {/* Social Icons - Mobile */}
+          <div className="flex gap-6 text-3xl mt-2">
+            {socialIcons.map(({ href, label, icon, hoverColor }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                className={`transition-transform duration-300 hover:scale-110 ${hoverColor}`}
+              >
+                {icon}
+              </a>
+            ))}
           </div>
         </div>
       )}

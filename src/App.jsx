@@ -6,7 +6,7 @@ import About from "./components/About.jsx";
 import Technologies from "./components/Technologies.jsx";
 import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
-import Contacts from "./components/Contacts.jsx";
+// import Contacts from "./components/Contacts.jsx";
 import OpenSourceContributions from "./components/OpenSourceContributions.jsx";
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
             <Route path="/experience" element={<Experience />} />
             <Route path="/opensource" element={<OpenSourceContributions />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contacts />} />
+            {/* <Route path="/contact" element={<Contacts />} /> */}
           </Routes>
         </div>
       </div>
