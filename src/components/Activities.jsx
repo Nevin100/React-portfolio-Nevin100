@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { OpenSourceContributionsData } from "../constants/index.js";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-function OpenSourceContributions() {
+function Activities() {
   return (
     <div className="border-b border-neutral-900 pb-24 px-4 sm:px-8 lg:px-16">
       {/* Heading */}
@@ -96,4 +96,4 @@ function OpenSourceContributions() {
   );
 }
 
-export default OpenSourceContributions;
+export default Activities;

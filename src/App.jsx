@@ -7,7 +7,7 @@ import Technologies from "./components/Technologies.jsx";
 import Experience from "./components/Experience.jsx";
 import Projects from "./components/Projects.jsx";
 // import Contacts from "./components/Contacts.jsx";
-import OpenSourceContributions from "./components/OpenSourceContributions.jsx";
+import Activities from "./components/Activities.jsx";
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/technologies" element={<Technologies />} />
             <Route path="/experience" element={<Experience />} />
-            <Route path="/opensource" element={<OpenSourceContributions />} />
+            <Route path="/activities" element={<Activities />} />
             <Route path="/projects" element={<Projects />} />
             {/* <Route path="/contact" element={<Contacts />} /> */}
           </Routes>
