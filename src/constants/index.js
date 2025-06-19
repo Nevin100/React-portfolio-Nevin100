@@ -281,8 +281,7 @@ export const PROJECTS = [
   },
   {
     title: "🚀 ReactIn3D 🧠💌",
-    image: project10,
-    github: "https://github.com/yourusername/ReactIn3D",
+    image: project10, github:"https://github.com/Nevin100/ReactIn3D",
     description:
       `ReactIn3D is a futuristic 3D email platform for developers. Built with React.js, Tailwind CSS, and Spline, it redefines frontend presentation with stunning visuals.`.padEnd(
         140,
