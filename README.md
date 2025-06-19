@@ -1,10 +1,11 @@
-# 🧑‍💻 Nevin Bali's Portfolio
+# 🧑‍💻 My Personal Portfolio
 
 Welcome to my personal developer portfolio!  
 This project showcases my skills, experience, and the tech stack I use — built with **React**, styled using **Tailwind CSS**, and fully **responsive** across all screen sizes.
 
 🔗 **Live Demo**: [react-portfolio-nevin100.vercel.app](https://react-portfolio-nevin100.vercel.app)
-![image](https://github.com/user-attachments/assets/6f2360ec-7059-4b3a-8a11-539247c2f37e)
+
+
 
 ---
 
