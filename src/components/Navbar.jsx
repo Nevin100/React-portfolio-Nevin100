@@ -45,27 +45,24 @@ function Navbar() {
     <nav className="mb-20 flex items-center justify-between py-6 px-4 md:px-8 bg-transparent relative z-20">
       {/* Logo */}
       <div className="flex items-center">
-        <img className="w-14" src={logo} alt="Nevin Logo" />
+        <Link to={"/"}>
+          <img className="w-14" src={logo} alt="Nevin Logo" />
+        </Link>
       </div>
 
       {/* Desktop Menu */}
       <div className="hidden lg:flex gap-9 items-center text-xl font-medium">
-        {[
-          "Home",
-          "About",
-          "Technologies",
-          "Experience",
-          "Activities",
-          "Projects",
-        ].map((item) => (
-          <Link
-            key={item}
-            to={`/${item.toLowerCase()}`}
-            className="hover:text-purple-400 transition"
-          >
-            {item}
-          </Link>
-        ))}
+        {["About", "Technologies", "Experience", "Activities", "Projects"].map(
+          (item) => (
+            <Link
+              key={item}
+              to={`/${item.toLowerCase()}`}
+              className="hover:text-purple-400 transition"
+            >
+              {item}
+            </Link>
+          )
+        )}
 
         {/* Social Icons - Desktop */}
         <div className="flex gap-4 text-2xl ml-4">
