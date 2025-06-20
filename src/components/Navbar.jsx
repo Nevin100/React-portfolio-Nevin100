@@ -92,7 +92,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-zinc-900/95 backdrop-blur-md shadow-lg flex flex-col items-center py-6 space-y-6 text-xl font-medium lg:hidden z-20">
+        <div className="absolute top-full left-0 w-full bg-transparent cursor-pointer backdrop-blur-md shadow-lg flex flex-col items-center py-6 space-y-8 text-xl font-medium lg:hidden z-20">
           {[
             "About",
             "Technologies",
@@ -111,7 +111,7 @@ function Navbar() {
           ))}
 
           {/* Social Icons - Mobile */}
-          <div className="flex gap-6 text-3xl mt-2">
+          <div className="flex gap-6 text-3xl mt-3">
             {socialIcons.map(({ href, label, icon, hoverColor }) => (
               <a
                 key={label}

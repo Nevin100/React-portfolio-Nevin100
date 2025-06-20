@@ -34,9 +34,9 @@ function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow-md"
+        className="my-24 py-4 lg:py-6 text-center text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow-md"
       >
-        Featured Projects
+        My Projects
       </motion.h2>
 
       {/* Search Input */}
@@ -61,23 +61,24 @@ function Projects() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-neutral-900 rounded-xl shadow-lg cursor-pointer hover:shadow-purple-700/20 transition-all duration-300 overflow-hidden relative flex flex-col"
+              className="bg-neutral-900 rounded-xl shadow-xl cursor-pointer hover:shadow-purple-700/20 transition-all duration-300 overflow-hidden relative flex flex-col"
             >
               {/* GitHub Icon */}
               <a
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute top-3 right-3 text-purple-600 hover:text-purple-800 z-10"
+                className="absolute top-3 right-3 text-purple-600 hover:text-purple-800 rounded-full bg-neutral-300/10 p-2 z-10"
               >
-                <FiGithub size={22} />
+                <FiGithub size={25} />
               </a>
 
               {/* Image */}
+
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-auto object-cover"
               />
 
               {/* Content */}

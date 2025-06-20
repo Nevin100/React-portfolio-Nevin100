@@ -57,7 +57,7 @@ export default function About() {
 
           {/* Title with updated gradient colors */}
           <h2
-            className="text-6xl text-center md:text-6xl font-bold mb-10
+            className="text-6xl text-center md:text-6xl font-bold mb-12 lg:mb-14
                        bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400
                        bg-clip-text text-transparent drop-shadow-md"
           >
@@ -69,21 +69,21 @@ export default function About() {
             ref={aboutContentRef}
             className="space-y-6 animate-in fade-in duration-300 mb-6"
           >
-            <p className="text-zinc-300 leading-relaxed text-lg ">
+            <p className="text-zinc-300 leading-relaxed text-md lg:text-lg ">
               Hey there! I&apos;m Nevin Bali, a passionate Full Stack Developer
               and aspiring Data Scientist currently pursuing B.Tech at MSIT. I
               specialize in building robust web applications using the MERN
               stack, and love leveraging Next.js, TypeScript, and Prisma for
               full-fledged development.
             </p>
-            <p className="text-zinc-300 leading-relaxed text-lg">
+            <p className="text-zinc-300 leading-relaxed text-md lg:text-lg">
               Beyond development, I enjoy building responsive UI with Tailwind
               CSS and exploring Firebase, Power BI, and data analysis tools. As
               the Deputy Head of Development in GDGOC and Geek Room, I’ve led
               impactful projects, collaborated with teams, and contributed to
               major tech initiatives.
             </p>
-            <p className="text-zinc-300 leading-relaxed text-lg">
+            <p className="text-zinc-300 leading-relaxed text-md lg:text-lg">
               I&apos;m always up for freelance work, open-source collabs, or
               hackathons. When I’m not coding, you’ll find me exploring deep
               learning or crafting innovative side projects.
@@ -91,16 +91,22 @@ export default function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
               <div className="bg-zinc-700/30 p-4 rounded-lg border border-zinc-700/50">
-                <h4 className="text-white font-semibold mb-4">Education</h4>
-                <p className="text-zinc-300">B.Tech CSE</p>
-                <p className="text-zinc-400 text-md">
+                <h4 className="text-white font-semibold text-md lg:text-lg">
+                  Education
+                </h4>
+                <p className="text-zinc-300 text-md lg:text-lg">B.Tech CSE</p>
+                <p className="text-zinc-400 text-md lg:text-lg">
                   Maharaja Surajmal Institute of Technology (2023–2027)
                 </p>
               </div>
               <div className="bg-zinc-700/30 p-4 rounded-lg border border-zinc-700/50">
-                <h4 className="text-white font-semibold mb-4">Location</h4>
-                <p className="text-zinc-300">New Delhi, India</p>
-                <p className="text-zinc-400 text-md">
+                <h4 className="text-white font-semibold mb-4 text-md lg:text-lg">
+                  Location
+                </h4>
+                <p className="text-zinc-300 text-md lg:text-lg">
+                  New Delhi, India
+                </p>
+                <p className="text-zinc-400 text-md lg:text-lg ">
                   Open to remote & freelance work
                 </p>
               </div>
