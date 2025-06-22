@@ -1,4 +1,4 @@
-# 🧑‍💻 My Personal Portfolio
+# 🧑‍💻 My Personal Portfolio (V 1.0-2.0)
 
 Welcome to my personal developer portfolio!  
 This project showcases my skills, experience, and the tech stack I use — built with **React**, styled using **Tailwind CSS**, and fully **responsive** across all screen sizes.
