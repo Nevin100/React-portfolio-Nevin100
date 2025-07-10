@@ -9,6 +9,7 @@ import project7 from "../assets/projects/project-7.jpg";
 import project8 from "../assets/projects/7.png";
 import project9 from "../assets/projects/sparkImage.jpg";
 import project10 from "../assets/projects/9.png";
+import project11 from "../assets/projects/project11.jpg";
 
 import image1 from "../assets/Open/image1.jpg";
 import image2 from "../assets/Open/image-2.jpg";
@@ -68,6 +69,37 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "📰 NewsMail – AI-Integrated Newsletter Platform",
+    image: project11,
+    github: "https://github.com/Nevin100/NewsMail",
+    description:
+      "NewsMail is a powerful MERN stack newsletter platform that allows scraping news articles, managing subscribers, and sending bulk emails with AI-enhanced summaries.".padEnd(
+        140,
+        " "
+      ),
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind",
+      "Nodemailer",
+      "OpenAI API",
+      "Cheerio",
+    ],
+    keyFeatures: [
+      "Scrapes and summarizes news content using OpenAI API",
+      "Bulk email sending via Nodemailer",
+      "Admin dashboard for newsletter management",
+      "AI integration for custom content generation",
+    ],
+    learnings: [
+      "Worked with Cheerio for DOM parsing and scraping",
+      "Integrated OpenAI API for summarizing articles",
+      "Handled newsletter scheduling and bulk mailing",
+    ],
+  },
   {
     title: "⚡ HireWire – AI-Powered Interview Preparation Tool",
     image: project1,
@@ -149,36 +181,6 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "💬 Baatein – Real-Time Chat App",
-    image: project4,
-    github: "https://github.com/Nevin100/Baatein",
-    description:
-      "Baatein is a MERN chat app with real-time messaging via Socket.io, dynamic themes, and secure authentication using JWT.".padEnd(
-        140,
-        " "
-      ),
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Socket.io",
-      "JWT",
-      "Bcrypt.js",
-      "Zustand",
-      "TailwindCSS",
-      "DaisyUI",
-    ],
-    keyFeatures: [
-      "Real-time messaging with Socket.io",
-      "Dynamic themes using DaisyUI components",
-    ],
-    learnings: [
-      "Implemented instant chat with WebSockets",
-      "Handled secure login with Bcrypt and JWT",
-    ],
-  },
-  {
     title: "🗒️ Notify – Cloud Notes App",
     image: project5,
     github: "https://github.com/Nevin100/Notify",
@@ -252,6 +254,36 @@ export const PROJECTS = [
     ],
   },
   {
+    title: "💬 Baatein – Real-Time Chat App",
+    image: project4,
+    github: "https://github.com/Nevin100/Baatein",
+    description:
+      "Baatein is a MERN chat app with real-time messaging via Socket.io, dynamic themes, and secure authentication using JWT.".padEnd(
+        140,
+        " "
+      ),
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.io",
+      "JWT",
+      "Bcrypt.js",
+      "Zustand",
+      "TailwindCSS",
+      "DaisyUI",
+    ],
+    keyFeatures: [
+      "Real-time messaging with Socket.io",
+      "Dynamic themes using DaisyUI components",
+    ],
+    learnings: [
+      "Implemented instant chat with WebSockets",
+      "Handled secure login with Bcrypt and JWT",
+    ],
+  },
+  {
     title: "⚡ SPARK – Bridging the Gap Between Campus & Code! 🚀",
     image: project9,
     github: "https://github.com/Nevin100/S.P.A.R.K",
@@ -281,7 +313,8 @@ export const PROJECTS = [
   },
   {
     title: "🚀 ReactIn3D 🧠💌",
-    image: project10, github:"https://github.com/Nevin100/ReactIn3D",
+    image: project10,
+    github: "https://github.com/Nevin100/ReactIn3D",
     description:
       `ReactIn3D is a futuristic 3D email platform for developers. Built with React.js, Tailwind CSS, and Spline, it redefines frontend presentation with stunning visuals.`.padEnd(
         140,
