@@ -10,6 +10,7 @@ import project8 from "../assets/projects/7.png";
 import project9 from "../assets/projects/sparkImage.jpg";
 import project10 from "../assets/projects/9.png";
 import project11 from "../assets/projects/project11.jpg";
+import project12 from "../assets/projects/project12.jpg";
 
 import image1 from "../assets/Open/image1.jpg";
 import image2 from "../assets/Open/image-2.jpg";
@@ -69,6 +70,34 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "🤖 InteliMail – AI Cold Email Generator",
+    image: project12,
+    github: "https://github.com/Nevin100/InteliMail-AI-Cold-Email-Generator",
+    description:
+      "InteliMail is a lightweight AI-powered web tool that helps users generate formal, personalized cold emails instantly using the Gemini LLM model.".padEnd(
+        140,
+        " "
+      ),
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Gemini API",
+    ],
+    keyFeatures: [
+      "Generate formal emails based on user details using Gemini LLM",
+      "Supports name, position, role, qualities, and social links",
+      "Fully responsive design with clean UI and one-click copy",
+      "No sign-up or authentication needed – just plug and play",
+    ],
+    learnings: [
+      "Integrated Gemini API for dynamic email generation",
+      "Designed a frictionless user flow with no backend complexity",
+      "Built a sleek UI using TailwindCSS and shadcn/ui",
+    ],
+  },
   {
     title: "📰 NewsMail – AI-Integrated Newsletter Platform",
     image: project11,
