@@ -22,7 +22,7 @@ function Hero() {
               transition={{ duration: 0.5, delay: 1 }}
               className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl tracking-tight text-transparent"
             >
-              Full Stack Developer & Data Analyst
+              Aspiring Software Engineer + DevOps Enthusiast
             </motion.span>
             <motion.p
               initial={{ x: -100, opacity: 0 }}

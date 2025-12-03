@@ -18,7 +18,9 @@ import image3 from "../assets/Open/image-3.jpg";
 import image4 from "../assets/Open/image-4.jpg";
 import image5 from "../assets/Open/image-5.jpg";
 
-export const HERO_CONTENT = `I am a passionate Full Stack Developer actively building scalable and modern web applications using the MERN stack. On the frontend, I specialize in React.js with TypeScript, Redux Toolkit, and Tailwind CSS, crafting responsive and dynamic user experiences. On the backend, I work with Node.js, Express.js, MongoDB (with Mongoose ODM), and Prisma, and I’m also exploring PostgreSQL with Neon for advanced data handling. I have experience implementing authentication, secure APIs, and third-party integrations like Firebase and Cloudinary. Additionally, I bring analytical skills in Data Analysis using Python and Excel, along with dashboarding and insights visualization using Power BI.`;
+export const HERO_CONTENT = `I am a passionate Full Stack Developer focused on building scalable and modern web applications using the MERN stack. On the frontend, I work extensively with React.js, TypeScript, Redux Toolkit, and Tailwind CSS to create responsive, high-performance user interfaces. On the backend, I develop robust APIs using Node.js, Express.js, MongoDB with Mongoose, and I’m expanding my expertise with Prisma and PostgreSQL (Neon) for advanced data workflows.
+I have hands-on experience implementing authentication, secure REST APIs, and third-party integrations such as Firebase and Cloudinary. Alongside development, I apply strong analytical skills in Python, Excel, and Power BI to build dashboards and data-driven insights.
+Currently, I am also strengthening my foundation in Cloud and DevOps, exploring Docker, CI/CD concepts, and cloud-native workflows to build more scalable and production-ready systems.`;
 
 export const ABOUT_TEXT = `Hi, I’m Nevin Bali — a tech enthusiast, problem solver, and passionate full stack developer who finds joy in building products that are both functional and beautiful.
 
@@ -35,6 +37,23 @@ export const ABOUT_TEXT = `Hi, I’m Nevin Bali — a tech enthusiast, problem s
 🔗 Scroll below, check out my work, or just drop me a “Hey” in the contact section.`;
 
 export const EXPERIENCES = [
+  {
+  "Duration": "Aug 2025 – Jan 2026 (Ongoing)",
+  "role": "Full Stack Web Developer Intern",
+  "company": "Square Education Pvt. Ltd.",
+  "description": "Developed and managed the company's main MVP, HopOnCareer.com, using Next.js (TypeScript), FastAPI, PostgreSQL (Cloud SQL), Docker, Firebase Auth, and JWT-based admin authentication.",
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "FastAPI",
+    "PostgreSQL (Cloud SQL)",
+    "Docker",
+    "Firebase",
+    "JWT",
+    "Google Cloud"
+  ],
+  "Tasks": "Handled the full production codebase, integrated PayU payment gateway, and managed complete cloud deployment and infrastructure for the live product in a remote environment."
+},
   {
     Duration: "Mar 2025 – Apr 2025",
     role: "Full Stack Web Developer Intern",

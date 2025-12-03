@@ -70,23 +70,13 @@ export default function About() {
             className="space-y-6 animate-in fade-in duration-300 mb-6"
           >
             <p className="text-zinc-300 leading-relaxed text-md lg:text-lg ">
-              Hey there! I&apos;m Nevin Bali, a passionate Full Stack Developer
-              and aspiring Data Scientist currently pursuing B.Tech at MSIT. I
-              specialize in building robust web applications using the MERN
-              stack, and love leveraging Next.js, TypeScript, and Prisma for
-              full-fledged development.
+              Hey there! I&apos;m Nevin Bali, a passionate Full Stack Developer and pre-final year B.Tech CSE student dedicated to building scalable and modern web applications. I work extensively with the MERN stack and also enjoy building full-fledged applications using Next.js, TypeScript, Prisma, and cloud-native architectures.
             </p>
             <p className="text-zinc-300 leading-relaxed text-md lg:text-lg">
-              Beyond development, I enjoy building responsive UI with Tailwind
-              CSS and exploring Firebase, Power BI, and data analysis tools. As
-              the Deputy Head of Development in GDGOC and Geek Room, I’ve led
-              impactful projects, collaborated with teams, and contributed to
-              major tech initiatives.
+              I specialize in crafting responsive, high-performance UIs with Tailwind CSS, while developing secure and production-ready APIs using Node.js, Express.js, MongoDB, and PostgreSQL (Neon). As the Deputy Head of Development at GDGOC and Geek Room, I&apos;ve led teams, contributed to impactful projects, organized hackathons, and collaborated across multiple tech communities.
             </p>
             <p className="text-zinc-300 leading-relaxed text-md lg:text-lg">
-              I&apos;m always up for freelance work, open-source collabs, or
-              hackathons. When I’m not coding, you’ll find me exploring deep
-              learning or crafting innovative side projects.
+              Alongside full-stack development, I&apos;m actively deepening my expertise in Cloud and DevOps, exploring Docker, CI/CD workflows, FastAPI, and scalable deployment pipelines. I also enjoy freelancing, experimenting with AI-driven tools, and building innovative side projects whenever creativity strikes.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
@@ -107,14 +97,14 @@ export default function About() {
                   New Delhi, India
                 </p>
                 <p className="text-zinc-400 text-md lg:text-lg ">
-                  Open to remote & freelance work
+                  Open to fulltime, partime, remote & freelance work
                 </p>
               </div>
             </div>
 
             {/* Resume Button */}
             <div className="flex justify-center mt-14 pt-6 border-t border-zinc-700/50">
-              <Link to="https://drive.google.com/file/d/13rG8EzTr7nb_ZDNqiGaf462MoIDoGbUi/view?usp=sharing">
+              <Link to="https://drive.google.com/file/d/1Dtnr74RnVLa9KMAWiboq43DwC0GJhhJf/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <button className="flex mt-4 items-center bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 hover:from-purple-500 hover:via-pink-500 hover:to-sky-500 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-transform hover:scale-105">
                   My Resume
                   <ExternalLink className="ml-2 h-4 w-4" />

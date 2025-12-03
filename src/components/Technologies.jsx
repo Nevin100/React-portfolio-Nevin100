@@ -1,183 +1,270 @@
-import { useRef, useEffect, useState } from "react";
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import { motion } from "framer-motion";
-import { FaNodeJs, FaPython } from "react-icons/fa";
 import {
+  SiJavascript,
   SiTypescript,
+  SiPython,
+  SiCplusplus,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiNextdotjs,
   SiRedux,
   SiTailwindcss,
-  SiMongodb,
-  SiMongoose,
+  SiFramer,
+  SiNodedotjs,
   SiExpress,
-  SiPrisma,
-  SiBootstrap,
+  SiFastapi,
+  SiMongodb,
   SiPostgresql,
+  SiPrisma,
+  SiMysql,
+  SiSupabase,
   SiFirebase,
   SiDocker,
-  SiFramer,
   SiPostman,
-  SiGit,
+  SiGithub,
   SiPowerbi,
+  SiAmazonaws,
+  SiGooglecloud,
+  SiKubernetes,
+  SiGit,
+  SiBootstrap,
+  SiNestjs,
+  SiAppwrite,
+  SiApachekafka,
 } from "react-icons/si";
-import { RiReactjsLine } from "react-icons/ri";
-import { TbBrandMysql } from "react-icons/tb";
+import { FaJava, FaFileCode } from "react-icons/fa";
 
-const sections = [
-  {
-    title: "Languages",
-    items: [
-      { name: "JavaScript", color: "text-yellow-400", emoji: "🟨" },
-      { Icon: SiTypescript, name: "TypeScript", color: "text-blue-600" },
-      { name: "SQL", color: "text-indigo-400", emoji: "🗄️" },
-      { Icon: FaPython, name: "Python", color: "text-blue-500" },
-      { name: "C / C++", color: "text-gray-400", emoji: "💻" },
-      { name: "HTML", color: "text-orange-500", emoji: "📄" },
-      { name: "CSS", color: "text-blue-300", emoji: "🎨" },
-    ],
-  },
-  {
-    title: "Frontend",
-    items: [
-      { Icon: RiReactjsLine, name: "React.js", color: "text-cyan-400" },
-      { Icon: SiRedux, name: "Redux / RTK Query", color: "text-purple-600" },
-      { name: "REST APIs", color: "text-green-400", emoji: "🔗" },
-      { name: "JWT Auth", color: "text-yellow-400", emoji: "🔐" },
-      { Icon: SiBootstrap, name: "Bootstrap", color: "text-purple-500" },
-      { Icon: SiTailwindcss, name: "Tailwind CSS", color: "text-sky-400" },
-      { name: "Spline", color: "text-pink-400", emoji: "✨" },
-      { name: "AOS Animations", color: "text-purple-400", emoji: "🎞️" },
-      { Icon: SiFramer, name: "Framer Motion", color: "text-pink-600" },
-    ],
-  },
-  {
-    title: "Backend",
-    items: [
-      { Icon: FaNodeJs, name: "Node.js", color: "text-green-600" },
-      { Icon: SiExpress, name: "Express.js", color: "text-green-900" },
-      { Icon: SiMongoose, name: "Mongoose", color: "text-red-600" },
-      { Icon: SiPrisma, name: "Prisma", color: "text-blue-400" },
-      { name: "FastAPI", color: "text-teal-400", emoji: "🚀" },
-    ],
-  },
-  {
-    title: "Databases",
-    items: [
-      { Icon: SiMongodb, name: "MongoDB", color: "text-green-700" },
-      { name: "Appwrite", color: "text-red-600", emoji: "📦" },
-      { Icon: TbBrandMysql, name: "MySQL", color: "text-blue-400" },
-      { Icon: SiFirebase, name: "Firebase", color: "text-yellow-400" },
-      { Icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-700" },
-      { name: "Supabase", color: "text-blue-500", emoji: "🦸" },
-      { name: "Neon", color: "text-pink-500", emoji: "🌌" },
-    ],
-  },
-  {
-    title: "Developer Tools",
-    items: [
-      { Icon: SiPostman, name: "Postman", color: "text-orange-600" },
-      { Icon: SiGit, name: "Git/GitHub", color: "text-red-500" },
-      { Icon: SiPowerbi, name: "Power BI", color: "text-yellow-400" },
-      { name: "MS Excel", color: "text-green-600", emoji: "📊" },
-      { name: "Thunder Client", color: "text-purple-600", emoji: "⚡" },
-      { Icon: SiDocker, name: "Docker", color: "text-blue-600" },
-    ],
-  },
-  {
-    title: "Learning",
-    items: [
-      { name: "FastAPI", color: "text-teal-400", emoji: "🚀" },
-      { name: "AWS", color: "text-orange-400", emoji: "☁️" },
-    ],
-  },
-];
+export default function Technologies({ sections }) {
+  const defaultSections = sections || [
+    {
+      title: "Languages",
+      items: [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Java",
+        "C",
+        "C++",
+        "HTML",
+        "CSS",
+      ],
+    },
+    {
+      title: "Frontend",
+      items: [
+        "React.js",
+        "Next.js",
+        "Bootstrap",
+        "Material-UI",
+        "Zustand",
+        "Chakra UI",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Framer Motion",
+        "AOS",
+      ],
+    },
+    {
+      title: "Backend",
+      items: [
+        "Node.js",
+        "Express.js",
+        "FastAPI",
+        "MongoDB (Mongoose)",
+        "PostgreSQL",
+        "Prisma",
+        "Mongoose ODM",
+        "NestJS (Learning)",
+        "Appwrite",
+        "Supabase Services",
+      ],
+    },
+    {
+      title: "Databases",
+      items: [
+        "MongoDB",
+        "PostgreSQL",
+        "Neon",
+        "Supabase",
+        "Firebase",
+        "MySQL",
+        "SQLite",
+      ],
+    },
+    {
+      title: "Developer Tools & Extras",
+      items: [
+        "Git/GitHub",
+        "Docker",
+        "Postman",
+        "Thunder Client",
+        "Power BI",
+      ],
+    },
+    {
+      title: "Learning & Working On",
+      items: [
+        "DevOps",
+        "Cloud (GCP, AWS)",
+        "CI/CD",
+        "Scalable Architectures",
+        "Microservices",
+        "Kafka",
+        "MonoRepo Patterns",
+      ],
+    },
+  ];
 
-export default function Technologies() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const containerRef = useRef(null);
+  const data = sections || defaultSections;
 
-  useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (containerRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        setMousePosition({
-          x: (e.clientX - rect.left) / rect.width,
-          y: (e.clientY - rect.top) / rect.height,
-        });
-      }
-    };
+  const iconMap = {
+    javascript: SiJavascript,
+    typescript: SiTypescript,
+    python: SiPython,
+    java: FaJava,
+    "c++": SiCplusplus,
+    c: SiCplusplus,
+    html: SiHtml5,
+    css: SiCss3,
+    react: SiReact,
+    next: SiNextdotjs,
+    redux: SiRedux,
+    tailwind: SiTailwindcss,
+    framer: SiFramer,
+    node: SiNodedotjs,
+    express: SiExpress,
+    fastapi: SiFastapi,
+    mongodb: SiMongodb,
+    mongoose: SiMongodb,
+    postgresql: SiPostgresql,
+    prisma: SiPrisma,
+    mysql: SiMysql,
+    neon: SiPostgresql,
+    supabase: SiSupabase,
+    firebase: SiFirebase,
+    docker: SiDocker,
+    postman: SiPostman,
+    "thunder client": SiPostman,
+    github: SiGithub,
+    git: SiGit,
+    "power bi": SiPowerbi,
+    aws: SiAmazonaws,
+    gcp: SiGooglecloud,
+    googlecloud: SiGooglecloud,
+    kubernetes: SiKubernetes,
+    bootstrap: SiBootstrap,
+    nest: SiNestjs,
+    nestjs: SiNestjs,
+    appwrite: SiAppwrite,
+    kafka: SiApachekafka,
+    "ci/cd": SiGit,
+  };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  // getIcon: try exact then substring matching then fallback to null
+  const getIcon = (techName) => {
+    const key = techName.toLowerCase().trim();
+    if (iconMap[key]) return iconMap[key];
+    const found = Object.keys(iconMap).find((k) => key.includes(k));
+    if (found) return iconMap[found];
+    // no brand icon available — return null so we can use file fallback
+    return null;
+  };
+
+  // build initials for potential use (optional)
+  const initials = (name) => {
+    const parts = name
+      .replace(/\(.*\)/, "") // remove parenthesis like (Mongoose)
+      .split(/[\s\-_/]+/)
+      .filter(Boolean);
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + (parts[1][0] || "")).toUpperCase();
+  };
 
   return (
-    <section className="relative w-full py-20 px-4 md:px-8 lg:px-2 bg-transparent min-h-[1000px]">
-      {/* Glow Backgrounds */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-purple-400 blur-3xl opacity-10"></div>
-        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-pink-400 blur-3xl opacity-10"></div>
+    <section className="py-20 px-4 sm:px-8 lg:px-16 relative">
+      {/* soft glows */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <div className="absolute top-8 left-16 w-56 h-56 bg-purple-500/16 blur-[90px] rounded-full"></div>
+        <div className="absolute bottom-8 right-16 w-64 h-64 bg-sky-400/14 blur-[110px] rounded-full"></div>
       </div>
 
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div
-          ref={containerRef}
-          className="relative rounded-3xl border border-zinc-800/50 bg-zinc-900/20 backdrop-blur-lg shadow-2xl p-6 md:p-10"
-          style={{
-            background: `radial-gradient(circle at ${mousePosition.x * 100}% ${
-              mousePosition.y * 100
-            }%, rgba(192,132,252,0.12), rgba(236,72,153,0.06), rgba(135,206,235,0))`,
-          }}
-        >
-          {/* Neon Border */}
-          <div className="rounded-md absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
-          <div className="rounded-md absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
-          <div className="rounded-md absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
-          <div className="rounded-md absolute top-0 right-0 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
+      {/* Title */}
+      <motion.h2
+        initial={{ opacity: 0, y: -18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55 }}
+        className="text-center text-4xl md:text-6xl lg:text-7xl font-extrabold mb-16 leading-tight
+                   bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent"
+      >
+        Technologies & Skills
+      </motion.h2>
 
-          {/* Heading */}
-          <h2 className="my-16 text-center text-3xl lg:text-6xl py-10 font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow-md">
-            Technologies & Skills
-          </h2>
+      {/* Grid: responsive -> 1 / 2 / 3 columns */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {data.map((section, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: i * 0.06 }}
+            className="p-6 md:p-8 rounded-2xl bg-neutral-900/40 border border-neutral-800/60
+                       shadow-[0_10px_30px_rgba(2,6,23,0.6)] backdrop-blur-md
+                       hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(124,58,237,0.12)]
+                       transition-transform duration-300"
+          >
+            <h3 className="text-lg md:text-xl lg:text-2xl font-semibold mb-4
+                           bg-gradient-to-r from-purple-300 to-sky-300 bg-clip-text text-transparent">
+              {section.title}
+            </h3>
 
-          {/* Skill Sections */}
-          {sections.map(({ title, items }, idx) => (
-            <section key={idx} className="mb-16">
-              <h3 className="text-center text-2xl sm:text-3xl font-semibold mb-6 sm:mb-8 bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent drop-shadow-md">
-                {title}
-              </h3>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 px-2 sm:px-4 place-items-center">
-                {items.map(({ Icon, name, color, emoji }, i) => (
+            <div className="flex flex-wrap gap-3">
+              {section.items.map((tech, idx) => {
+                const Icon = getIcon(tech);
+                return (
                   <motion.div
-                    key={i}
-                    initial={{ y: -10 }}
-                    animate={{ y: [10, -10] }}
-                    transition={{
-                      duration: 2 + (i % 3),
-                      delay: i * 0.15,
-                      ease: "easeInOut",
-                      repeat: Infinity,
-                      repeatType: "reverse",
-                    }}
-                    className="flex flex-col items-center space-y-2 rounded-2xl border-4 cursor-pointer border-neutral-800 p-4 sm:p-6 w-24 sm:w-28 hover:border-purple-500 transition-transform duration-300"
-                    title={name}
+                    key={idx}
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    whileHover={{ scale: 1.02, y: -4 }}
+                    transition={{ duration: 0.35, delay: idx * 0.03 }}
+                    className="flex items-center gap-3 px-4 py-3 rounded-2xl min-w-[10rem]
+                               bg-gradient-to-br from-neutral-900/80 via-neutral-800/70 to-neutral-900/80
+                               border border-neutral-700/50 text-neutral-100
+                               hover:border-purple-400/70 hover:shadow-[0_10px_30px_rgba(139,92,246,0.12)]
+                               transition-all duration-300"
+                    title={tech}
                   >
-                    {Icon ? (
-                      <Icon className={`text-5xl sm:text-6xl ${color}`} />
-                    ) : (
-                      <span className={`text-5xl sm:text-6xl ${color}`}>
-                        {emoji}
-                      </span>
-                    )}
-                    <span className="text-xs sm:text-sm text-neutral-300 font-medium text-center">
-                      {name}
+                    <span
+                      className="flex items-center justify-center rounded-full p-2
+                                 w-10 h-10 shrink-0 bg-gradient-to-br from-purple-700/12 to-sky-400/8"
+                      aria-hidden="true"
+                    >
+                      {/* If we found a brand icon, render it; otherwise show a file icon */}
+                      {Icon ? (
+                        <Icon className="w-6 h-6 text-purple-300" />
+                      ) : (
+                        <FaFileCode className="w-6 h-6 text-purple-300" />
+                      )}
+                    </span>
+
+                    <span className="text-base md:text-lg lg:text-xl font-medium leading-tight">
+                      {tech}
                     </span>
                   </motion.div>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+                );
+              })}
+            </div>
+          </motion.div>
+        ))}
       </div>
+
+      {/* footer note */}
+      <p className="text-center text-neutral-400 text-sm md:text-base mt-12">
+        Continuously evolving — exploring Cloud, DevOps, CI/CD, and scalable system design.
+      </p>
     </section>
   );
 }

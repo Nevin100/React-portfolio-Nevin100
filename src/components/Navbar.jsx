@@ -3,7 +3,6 @@ import logo from "../assets/NevinLogo.png";
 import {
   FaBars,
   FaTimes,
-  FaInstagram,
   FaLinkedin,
   FaGithub,
   FaEnvelope,
@@ -11,12 +10,6 @@ import {
 import { Link } from "react-router-dom";
 
 const socialIcons = [
-  {
-    href: "https://www.instagram.com/nevin_bali_777?igsh=bHh4Z2RpdWRyYXdj",
-    label: "Instagram",
-    icon: <FaInstagram />,
-    hoverColor: "hover:text-pink-400",
-  },
   {
     href: "https://www.linkedin.com/in/nevinbali1012/",
     label: "LinkedIn",
