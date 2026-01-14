@@ -104,7 +104,7 @@ export default function About() {
 
             {/* Resume Button */}
             <div className="flex justify-center mt-14 pt-6 border-t border-zinc-700/50">
-              <Link to="https://drive.google.com/file/d/1Dtnr74RnVLa9KMAWiboq43DwC0GJhhJf/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Link to="https://drive.google.com/file/d/1b6JlVv2VSWQwjyOtI8-EnSZTB7rQQ0yz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <button className="flex mt-4 items-center bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 hover:from-purple-500 hover:via-pink-500 hover:to-sky-500 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-transform hover:scale-105">
                   My Resume
                   <ExternalLink className="ml-2 h-4 w-4" />
