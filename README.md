@@ -3,6 +3,8 @@
 Welcome to my personal developer portfolio.  
 This project represents my journey as a **Full Stack Software Engineer**, showcasing real-world projects, technical expertise, and hands-on experience with modern web technologies, cloud-native systems, and scalable application architecture.
 <br/>
+<br/>
+
 <img width="1177" height="577" alt="image" src="https://github.com/user-attachments/assets/ebb43afe-2f14-41e5-a8e2-6b95e7df633c" />
 
 🔗 **Live Portfolio**: https://nevinbali.me
