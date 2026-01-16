@@ -1,29 +1,43 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useState, useEffect, useRef } from "react";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
 
 export default function About() {
-  const [contentHeight, setContentHeight] = useState(0);
-  const aboutContentRef = useRef(null);
   const headerRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    if (aboutContentRef.current) {
-      setContentHeight(aboutContentRef.current.scrollHeight);
-    }
-  }, []);
-
-  useEffect(() => {
     const handleMouseMove = (e) => {
-      if (headerRef.current) {
-        const rect = headerRef.current.getBoundingClientRect();
-        setMousePosition({
-          x: (e.clientX - rect.left) / rect.width,
-          y: (e.clientY - rect.top) / rect.height,
-        });
-      }
+      if (!headerRef.current) return;
+
+      const rect = headerRef.current.getBoundingClientRect();
+
+      setMousePosition({
+        x: (e.clientX - rect.left) / rect.width,
+        y: (e.clientY - rect.top) / rect.height,
+      });
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -31,89 +45,167 @@ export default function About() {
   }, []);
 
   return (
-    <section className="relative w-full py-24 rounded-xl px-4 md:px-8 lg:px-2 bg-transparent min-h-[850px]">
-      {/* Glow Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Replace teal/cyan background glows with purple → pink → sky blue gradients */}
-        <div className="absolute top-10 left-10 w-40 h-40 rounded-full bg-purple-400 blur-3xl opacity-10"></div>
-        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-pink-400 blur-3xl opacity-10"></div>
-      </div>
+    <>
+      <Helmet>
+        <title>About | Nevin Bali – Full Stack & GenAI Engineer</title>
 
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div
-          ref={headerRef}
-          className="relative rounded-2xl border border-zinc-800/50 bg-zinc-900/20 backdrop-blur-lg shadow-2xl p-6 md:p-10"
-          style={{
-            background: `radial-gradient(circle at ${mousePosition.x * 100}% ${
-              mousePosition.y * 100
-            }%, rgba(192,132,252,0.12), rgba(236,72,153,0.06), rgba(135,206,235,0))`,
-          }}
-        >
-          {/* Neon Border with updated purple-pink-sky gradient */}
-          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
-          <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
-          <div className="absolute top-0 right-0 h-full w-1 bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400 animate-pulse"></div>
+        <meta
+          name="description"
+          content="Nevin Bali is a Full Stack Software Engineer specializing in Next.js, GenAI, FastAPI, Docker, and scalable production-grade web applications."
+        />
 
-          {/* Title with updated gradient colors */}
-          <h2
-            className="text-6xl text-center md:text-6xl font-bold mb-12 lg:mb-14
-                       bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400
-                       bg-clip-text text-transparent drop-shadow-md"
+        <meta
+          name="keywords"
+          content="Nevin Bali, Full Stack Developer, GenAI Engineer, Next.js, DevOps, SaaS, MERN Stack"
+        />
+
+        <meta name="author" content="Nevin Bali" />
+      </Helmet>
+      <section
+        id="about"
+        className="relative w-full py-20 md:py-28 px-4 bg-transparent"
+      >
+        {/* Glow Background */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-16 left-10 w-44 h-44 bg-purple-400/20 blur-3xl rounded-full" />
+          <div className="absolute bottom-10 right-10 w-72 h-72 bg-pink-400/20 blur-3xl rounded-full" />
+        </div>
+
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <motion.article
+            ref={headerRef}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative rounded-2xl border border-zinc-800/60
+             bg-zinc-900/30 backdrop-blur-xl shadow-2xl
+             p-6 sm:p-8 md:p-12"
+            style={{
+              background: `radial-gradient(
+              circle at ${mousePosition.x * 100}% ${mousePosition.y * 100}%,
+              rgba(192,132,252,0.14),
+              rgba(236,72,153,0.08),
+              rgba(0,0,0,0)
+            )`,
+            }}
           >
-            About Me
-          </h2>
+            {/* Neon Frame */}
+            <div className="absolute inset-0 rounded-2xl pointer-events-none">
+              <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400" />
+              <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400" />
+              <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400" />
+              <div className="absolute inset-y-0 right-0 w-[2px] bg-gradient-to-b from-purple-400 via-pink-400 to-sky-400" />
+            </div>
 
-          {/* Content */}
-          <div
-            ref={aboutContentRef}
-            className="space-y-6 animate-in fade-in duration-300 mb-6"
-          >
-            <p className="text-zinc-300 leading-relaxed text-md lg:text-lg ">
-              Hey there! I&apos;m Nevin Bali, a passionate Full Stack Developer and pre-final year B.Tech CSE student dedicated to building scalable and modern web applications. I work extensively with the MERN stack and also enjoy building full-fledged applications using Next.js, TypeScript, Prisma, and cloud-native architectures.
-            </p>
-            <p className="text-zinc-300 leading-relaxed text-md lg:text-lg">
-              I specialize in crafting responsive, high-performance UIs with Tailwind CSS, while developing secure and production-ready APIs using Node.js, Express.js, MongoDB, and PostgreSQL (Neon). As the Deputy Head of Development at GDGOC and Geek Room, I&apos;ve led teams, contributed to impactful projects, organized hackathons, and collaborated across multiple tech communities.
-            </p>
-            <p className="text-zinc-300 leading-relaxed text-md lg:text-lg">
-              Alongside full-stack development, I&apos;m actively deepening my expertise in Cloud and DevOps, exploring Docker, CI/CD workflows, FastAPI, and scalable deployment pipelines. I also enjoy freelancing, experimenting with AI-driven tools, and building innovative side projects whenever creativity strikes.
-            </p>
+            {/* Heading */}
+            <motion.header
+              variants={fadeUp}
+              className="text-center mb-10 md:mb-14"
+            >
+              <h2
+                className="text-4xl sm:text-5xl md:text-6xl font-extrabold
+                           bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400
+                           bg-clip-text text-transparent"
+              >
+                About Me
+              </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
-              <div className="bg-zinc-700/30 p-4 rounded-lg border border-zinc-700/50">
-                <h4 className="text-white font-semibold text-md lg:text-lg">
-                  Education
-                </h4>
-                <p className="text-zinc-300 text-md lg:text-lg">B.Tech CSE</p>
-                <p className="text-zinc-400 text-md lg:text-lg">
+              <p className="mt-4 text-zinc-400 max-w-2xl mx-auto text-md sm:text-base">
+                Full Stack Engineer • GenAI • Cloud & DevOps • SaaS Builder
+              </p>
+            </motion.header>
+
+            {/* Content */}
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-6 max-w-4xl mx-auto text-zinc-300 text-sm sm:text-base md:text-lg leading-relaxed"
+            >
+              <p>
+                I’m <strong className="text-white">Nevin Bali</strong>, a Full
+                Stack Software Engineer with hands-on experience building
+                scalable, secure, and production-grade web applications. I have
+                worked end-to-end on real-world MVPs using{" "}
+                <strong>Next.js, TypeScript, FastAPI</strong>, and modern cloud
+                architectures, delivering systems used by real users in live
+                environments.
+              </p>
+
+              <p>
+                During my internships as an <strong>SDE Intern</strong>, I owned
+                and developed complete production systems — from frontend
+                interfaces to backend services, authentication, databases, and
+                deployments. My work includes building admin dashboards, payment
+                integrations, data-driven analytics platforms, and cloud-managed
+                applications using
+                <strong> PostgreSQL, MongoDB, Docker, Firebase, JWT</strong>,
+                and CI/CD pipelines.
+              </p>
+
+              <p>
+                I actively build and experiment in the
+                <strong> GenAI and SaaS</strong> space, developing AI-powered
+                products such as cold email generators, interview preparation
+                platforms, and newsletter automation tools using{" "}
+                <strong>Groq LLMs (Llama v3)</strong>. I focus on performance,
+                clean architecture, and real-world usability while integrating
+                AI, cloud infrastructure, and automation into scalable
+                full-stack systems.
+              </p>
+            </motion.div>
+
+            {/* Info Cards */}
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-12 max-w-4xl mx-auto"
+            >
+              <div className="rounded-xl bg-zinc-800/40 border border-zinc-700/60 p-5">
+                <h4 className="text-white font-semibold">Education</h4>
+                <p className="text-zinc-300 mt-1">B.Tech – Computer Science</p>
+                <p className="text-zinc-400 text-sm">
                   Maharaja Surajmal Institute of Technology (2023–2027)
                 </p>
               </div>
-              <div className="bg-zinc-700/30 p-4 rounded-lg border border-zinc-700/50">
-                <h4 className="text-white font-semibold mb-4 text-md lg:text-lg">
-                  Location
-                </h4>
-                <p className="text-zinc-300 text-md lg:text-lg">
-                  New Delhi, India
-                </p>
-                <p className="text-zinc-400 text-md lg:text-lg ">
-                  Open to fulltime, partime, remote & freelance work
-                </p>
-              </div>
-            </div>
 
-            {/* Resume Button */}
-            <div className="flex justify-center mt-14 pt-6 border-t border-zinc-700/50">
-              <Link to="https://drive.google.com/file/d/1b6JlVv2VSWQwjyOtI8-EnSZTB7rQQ0yz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <button className="flex mt-4 items-center bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 hover:from-purple-500 hover:via-pink-500 hover:to-sky-500 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-transform hover:scale-105">
-                  My Resume
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </button>
+              <address className="not-italic rounded-xl bg-zinc-800/40 border border-zinc-700/60 p-5">
+                <h4 className="text-white font-semibold">Location</h4>
+                <p className="text-zinc-300 mt-1">New Delhi, India</p>
+                <p className="text-zinc-400 text-sm">
+                  Open to Full-time • Remote • Contract • Freelance
+                </p>
+              </address>
+            </motion.div>
+
+            {/* Resume CTA */}
+            <div className="flex justify-center mt-14 pt-8 border-t border-zinc-700/50">
+              <Link
+                to="https://drive.google.com/file/d/1b6JlVv2VSWQwjyOtI8-EnSZTB7rQQ0yz/view"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.96 }}
+                  className="flex items-center gap-2
+                                 bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400
+                                 hover:from-purple-500 hover:via-pink-500 hover:to-sky-500
+                                 text-white px-6 py-3 rounded-xl font-medium
+                                 shadow-lg transition-transform hover:scale-105"
+                >
+                  View Resume
+                  <ExternalLink className="h-4 w-4" />
+                </motion.button>
               </Link>
             </div>
-          </div>
+          </motion.article>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
