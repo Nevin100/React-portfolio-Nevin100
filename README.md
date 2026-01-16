@@ -1,51 +1,98 @@
-# 🧑‍💻 My Personal Portfolio (V 1.0-2.0)
+# 🚀 Nevin Bali — Full Stack Engineer Portfolio
 
-Welcome to my personal developer portfolio!  
-This project showcases my skills, experience, and the tech stack I use — built with **React**, styled using **Tailwind CSS**, and fully **responsive** across all screen sizes.
+Welcome to my personal developer portfolio.  
+This project represents my journey as a **Full Stack Software Engineer**, showcasing real-world projects, technical expertise, and hands-on experience with modern web technologies, cloud-native systems, and scalable application architecture.
+<br/>
+<img width="1177" height="577" alt="image" src="https://github.com/user-attachments/assets/ebb43afe-2f14-41e5-a8e2-6b95e7df633c" />
 
-🔗 **Live Demo**: [react-portfolio-nevin100.vercel.app](https://react-portfolio-nevin100.vercel.app)
-
-
-
----
-
-## ✨ Features
-
-- ⚛️ **Built with React JS** — Component-based architecture
-- 🎨 **Tailwind CSS** — Utility-first CSS framework for fast and responsive styling
-- 📱 **Fully Responsive** — Works on all devices (mobile, tablet, desktop)
-- 💼 **Project Showcase** — Highlights personal and professional projects
-- 📇 **About Me Section** — A quick overview of who I am
+🔗 **Live Portfolio**: https://nevinbali.me
 
 ---
 
-## 📁 Tech Stack
+## 👋 About Me
 
-- **Frontend**: React JS
-- **Styling**: Tailwind CSS
-- **Animation**: Framer Motion
-- **Icons**: React Icons
-- **Deployment**: Vercel
+I am a **Full Stack Engineer** with experience building **production-ready web applications**, interactive dashboards, and SaaS-style platforms.  
+My work spans **frontend engineering, backend systems, authentication, analytics, and cloud deployment**, with a strong focus on clean UI, performance, and real-world usability.
+
+This portfolio is designed to reflect:
+- My technical depth
+- My problem-solving approach
+- My experience with modern development workflows
+
+---
+
+## ✨ Key Features
+
+- ⚛️ **Modern React Architecture** — Clean, component-driven design
+- 🎨 **Tailwind CSS** — Responsive, scalable, and consistent UI
+- 🎥 **Framer Motion Animations** — Subtle, professional motion design
+- 📱 **Fully Responsive Layout** — Optimized for mobile, tablet & desktop
+- 🧠 **SEO Optimized Pages** — Page-level metadata using React Helmet
+- 💼 **Projects Showcase** — Real-world, full-stack & AI-powered projects
+- 🧩 **Experience & Activities Sections** — Internships, leadership & hackathons
+- ⏳ **Minimal Professional Loader** — Optimized for performance & UX
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Tailwind CSS
+- Framer Motion
+- React Router
+- React Helmet (SEO)
+
+### Backend & Systems (Projects showcased)
+- Node.js & Express
+- Next.js (App Router)
+- MongoDB & Mongoose
+- PostgreSQL (Neon)
+- JWT Authentication
+- FastAPI
+- Razorpay Integration
+
+### Tooling & Deployment
+- Git & GitHub
+- Vercel
+- Docker (project-level)
+- Redux Toolkit
+- Power BI (Analytics projects)
+
+---
+
+## 📂 Featured Work
+
+This portfolio highlights:
+- **Full Stack SaaS applications**
+- **AI-powered tools (GenAI projects)**
+- **Invoice & finance management systems**
+- **Analytics dashboards**
+- **Hackathon & open-source contributions**
+
+Each project includes:
+- Tech stack
+- Key features
+- Learnings
+- GitHub repository links
 
 ---
 
 ## 📸 Screenshots
-![image](https://github.com/user-attachments/assets/ea3e8ff2-5262-4d8e-b3c2-ecfcd5343629)
-![image](https://github.com/user-attachments/assets/2785a2af-3548-4e51-b3c7-ffe9909f280a)
-![image](https://github.com/user-attachments/assets/bbe77483-2db2-4867-9f97-6c8bb2c964bb)
-![image](https://github.com/user-attachments/assets/24cf0709-bc49-475a-8b04-12c0952bd6b1)
-
-
+<img width="1199" height="579" alt="image" src="https://github.com/user-attachments/assets/ce56ad6f-abd1-460c-9035-a515167bdbea" />
+<img width="1210" height="589" alt="image" src="https://github.com/user-attachments/assets/44cce238-4025-4f5e-9dbb-6134113822f9" />
+<img width="1187" height="595" alt="image" src="https://github.com/user-attachments/assets/a2429d70-441b-4d89-9eec-14e175686bdc" />
+<img width="1146" height="585" alt="image" src="https://github.com/user-attachments/assets/c92fbb8d-4881-4486-a9a4-7a96cf064924" />
+<img width="1235" height="579" alt="image" src="https://github.com/user-attachments/assets/977a1169-3552-4253-8ccc-c4f0234d25c1" />
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Getting Started (Local Setup)
 
-To run this project locally:
+To run this portfolio locally:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio-repo.git
-cd your-portfolio-repo
+git clone https://github.com/Nevin100/react-portfolio.git
+cd react-portfolio
 npm install
 npm run dev
-```
