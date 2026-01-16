@@ -17,48 +17,36 @@ import image2 from "../assets/Open/image-2.jpg";
 import image3 from "../assets/Open/image-3.jpg";
 import image4 from "../assets/Open/image-4.jpg";
 import image5 from "../assets/Open/image-5.jpg";
+export const HERO_CONTENT = `Full Stack Software Engineer with hands-on experience building scalable, production-ready web applications using modern JavaScript frameworks and cloud-native tools. I specialize in React, Next.js, TypeScript, and Tailwind CSS on the frontend, and Node.js, Express, MongoDB, PostgreSQL, and FastAPI on the backend. I have worked on real-world MVPs involving secure authentication, REST APIs, third-party integrations, and data-driven dashboards, while actively exploring GenAI, Cloud, and DevOps workflows to deliver reliable, high-performance systems.`;
 
-export const HERO_CONTENT = `I am a passionate Full Stack Developer focused on building scalable and modern web applications using the MERN stack. On the frontend, I work extensively with React.js, TypeScript, Redux Toolkit, and Tailwind CSS to create responsive, high-performance user interfaces. On the backend, I develop robust APIs using Node.js, Express.js, MongoDB with Mongoose, and I’m expanding my expertise with Prisma and PostgreSQL (Neon) for advanced data workflows.
-I have hands-on experience implementing authentication, secure REST APIs, and third-party integrations such as Firebase and Cloudinary. Alongside development, I apply strong analytical skills in Python, Excel, and Power BI to build dashboards and data-driven insights.
-Currently, I am also strengthening my foundation in Cloud and DevOps, exploring Docker, CI/CD concepts, and cloud-native workflows to build more scalable and production-ready systems.`;
-
-export const ABOUT_TEXT = `Hi, I’m Nevin Bali — a tech enthusiast, problem solver, and passionate full stack developer who finds joy in building products that are both functional and beautiful.
-
-🎓 I'm currently pursuing my B.Tech in Computer Science at MSIT (2023–2027), and already diving deep into real-world development. From crafting scalable APIs to designing pixel-perfect UIs, I enjoy the full journey from backend logic to frontend delight.
-
-⚙️ My stack? Think MERN, Next.js, TypeScript, Firebase, Prisma, and Tailwind — a perfect blend of performance and aesthetics. I've worked with powerful state tools like Redux Toolkit and Zustand, implemented secure JWT auth, and handled real-time magic with Socket.io.
-
-📊 I also explore Data Science fundamentals, with experience in Power BI, NumPy, and EDA using Python. Visualization, for me, is where code meets storytelling.
-
-🚀 I’ve contributed to communities like Geekroom & GDG MSIT, where I serve as Deputy Head of Development. Mentorship, teamwork, and hackathons fuel my growth.
-
-💬 Always open to exciting collaborations, freelance gigs, and open source missions. Let’s build something that matters!
-
-🔗 Scroll below, check out my work, or just drop me a “Hey” in the contact section.`;
 
 export const EXPERIENCES = [
   {
-  "Duration": "Aug 2025 – Jan 2026 (Ongoing)",
-  "role": "Full Stack Web Developer Intern",
-  "company": "Square Education Pvt. Ltd.",
-  "description": "Developed and managed the company's main MVP, HopOnCareer.com, using Next.js (TypeScript), FastAPI, PostgreSQL (Cloud SQL), Docker, Firebase Auth, and JWT-based admin authentication.",
-  "technologies": [
-    "Next.js",
-    "TypeScript",
-    "FastAPI",
-    "PostgreSQL (Cloud SQL)",
-    "Docker",
-    "Firebase",
-    "JWT",
-    "Google Cloud"
-  ],
-  "Tasks": "Handled the full production codebase, integrated PayU payment gateway, and managed complete cloud deployment and infrastructure for the live product in a remote environment."
-},
+    Duration: "Aug 2025 – Jan 2026",
+    role: "Full Stack Web Developer Intern",
+    company: "Square Education Pvt. Ltd.",
+    description:
+      "Owning and developing the company’s primary production MVP, HopOnCareer.com, as a full-stack engineer. Building scalable, secure, and high-performance web applications using modern frontend, backend, and cloud-native technologies in a real production environment.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "FastAPI",
+      "PostgreSQL (Cloud SQL)",
+      "Docker",
+      "Firebase Authentication",
+      "JWT Authentication",
+      "Google Cloud Platform",
+    ],
+    Tasks:
+      "Led end-to-end development of the production codebase, including frontend architecture, backend APIs, authentication flows, and database design. Integrated PayU payment gateway, implemented JWT-based admin dashboards, and managed cloud deployment, infrastructure, and live user data in a remote, production setting.",
+  },
+
   {
     Duration: "Mar 2025 – Apr 2025",
     role: "Full Stack Web Developer Intern",
     company: "Financea",
-    description: `Worked in a remote startup environment to build the core MVP of Financea using Next.js, TypeScript, and MongoDB.`,
+    description:
+      "Worked in a fast-paced remote startup environment to design and build the core MVP of a data-driven financial platform, focusing on performance, scalability, and clean system architecture.",
     technologies: [
       "Next.js",
       "TypeScript",
@@ -66,35 +54,50 @@ export const EXPERIENCES = [
       "Tailwind CSS",
       "React 19",
     ],
-    Tasks: `Delivered full-stack features and contributed to the scalable architecture of the product.`,
+    Tasks:
+      "Developed full-stack features, implemented dynamic dashboards, and contributed to the overall product architecture. Collaborated closely with the team to deliver scalable, production-ready features within tight timelines.",
   },
+
   {
     Duration: "Feb 2025 – Present",
     role: "Deputy Head of Development",
     company: "Geek Room – MSIT",
-    description: `Leading development initiatives to boost the technical growth of the community. Coordinating meets and projects to empower students.`,
-    technologies: ["React.js", "Node.js", "Tailwind", "MongoDB"],
+    description:
+      "Leading development initiatives for a large-scale technical community, focusing on mentoring, project execution, and strengthening full-stack engineering practices among members.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "MongoDB",
+    ],
+    Tasks:
+      "Mentoring and leading 50+ developers, overseeing technical projects, organizing development-focused events, and driving hands-on learning through real-world full-stack applications and collaborative initiatives.",
   },
+
   {
     Duration: "Oct 2024 – Present",
     role: "Deputy Head of Development",
     company: "GDGOC – MSIT",
-    description: `Spearheading development initiatives to drive the community's technical advancement, while organizing projects and meetups to empower and upskill fellow students`,
+    description:
+      "Driving technical growth and development initiatives within a Google-backed developer community by leading teams, managing projects, and organizing large-scale technical events and campaigns.",
     technologies: [
-      "Departent Supervision",
-      "Department Management",
+      "Department Leadership",
+      "Team Management",
       "Full Stack Development",
     ],
+    Tasks:
+      "Supervised development teams, managed departmental operations, and played a key role in organizing workshops, hackathons, and community-driven projects aimed at upskilling students in modern software engineering practices.",
   },
 ];
 
+
 export const PROJECTS = [
   {
-    title: "🤖 InteliMail – AI Cold Email Generator",
+    title: "InteliMail – AI Cold Email Generator",
     image: project12,
     github: "https://github.com/Nevin100/InteliMail-AI-Cold-Email-Generator",
     description:
-      "InteliMail is a lightweight AI-powered web tool that helps users generate formal, personalized cold emails instantly using the Gemini LLM model.".padEnd(
+      "InteliMail is a lightweight AI-powered web tool that helps users generate formal, personalized cold emails instantly using the Groq LLM model.".padEnd(
         140,
         " "
       ),
@@ -103,22 +106,22 @@ export const PROJECTS = [
       "TypeScript",
       "Tailwind CSS",
       "shadcn/ui",
-      "Gemini API",
+      "Groq API",
     ],
     keyFeatures: [
-      "Generate formal emails based on user details using Gemini LLM",
+      "Generate formal emails based on user details using Groq LLM",
       "Supports name, position, role, qualities, and social links",
       "Fully responsive design with clean UI and one-click copy",
       "No sign-up or authentication needed – just plug and play",
     ],
     learnings: [
-      "Integrated Gemini API for dynamic email generation",
+      "Integrated Groq API for dynamic email generation",
       "Designed a frictionless user flow with no backend complexity",
       "Built a sleek UI using TailwindCSS and shadcn/ui",
     ],
   },
   {
-    title: "📰 NewsMail – AI-Integrated Newsletter Platform",
+    title: " NewsMail – AI-Integrated Newsletter Platform",
     image: project11,
     github: "https://github.com/Nevin100/NewsMail",
     description:
@@ -133,27 +136,27 @@ export const PROJECTS = [
       "MongoDB",
       "Tailwind",
       "Nodemailer",
-      "Gemini API",
+      "Groq API",
       "Cheerio",
     ],
     keyFeatures: [
-      "Scrapes and summarizes news content using Gemini API",
+      "Scrapes and summarizes news content using Groq API",
       "Bulk email sending via Nodemailer",
       "Admin dashboard for newsletter management",
       "AI integration for custom content generation",
     ],
     learnings: [
       "Worked with Cheerio for DOM parsing and scraping",
-      "Integrated Gemini API for summarizing articles",
+      "Integrated Groq API for summarizing articles",
       "Handled newsletter scheduling and bulk mailing",
     ],
   },
   {
-    title: "⚡ HireWire – AI-Powered Interview Preparation Tool",
+    title: " HireWire – AI-Powered Interview Preparation Tool",
     image: project1,
     github: "https://github.com/Nevin100/HireWire",
     description:
-      "HireWire is an AI-powered interview prep tool that generates tailored technical questions based on your role and experience using Gemini API.".padEnd(
+      "HireWire is an AI-powered interview prep tool that generates tailored technical questions based on your role and experience using Groq API.".padEnd(
         140,
         " "
       ),
@@ -164,19 +167,19 @@ export const PROJECTS = [
       "MongoDB",
       "JWT",
       "Tailwind",
-      "Gemini API",
+      "Groq API",
     ],
     keyFeatures: [
-      "AI-generated interview questions using Gemini API",
+      "AI-generated interview questions using Groq API",
       "Session-based prep with role and domain context",
     ],
     learnings: [
-      "Implemented Gemini API for dynamic question generation",
+      "Implemented Groq API for dynamic question generation",
       "Built session-based flows for personalized prep",
     ],
   },
   {
-    title: "📚 PagePulse – E-Commerce Bookstore",
+    title: " PagePulse – E-Commerce Bookstore",
     image: project2,
     github: "https://github.com/Nevin100/PagePulse",
     description:
@@ -202,7 +205,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "🚀 Sociopedia – MERN Social Media App",
+    title: " Sociopedia – MERN Social Media App",
     image: project3,
     github: "https://github.com/Nevin100/Sociopedia",
     description:
@@ -229,7 +232,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "🗒️ Notify – Cloud Notes App",
+    title: "Notify – Cloud Notes App",
     image: project5,
     github: "https://github.com/Nevin100/Notify",
     description:
@@ -256,7 +259,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "🍽️ Restaura – Restaurant Showcase Website",
+    title: "Restaura – Restaurant Showcase Website",
     image: project6,
     github: "https://github.com/Nevin100/Restaura",
     description:
@@ -275,7 +278,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "🌱 Plantventory — Track Your Greens Like a Pro 🪴✨",
+    title: "Plantventory — Track Your Greens Like a Pro ",
     image: project8,
     github: "https://github.com/Nevin100/Plantventory",
     description:
@@ -302,7 +305,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "💬 Baatein – Real-Time Chat App",
+    title: "Baatein – Real-Time Chat App",
     image: project4,
     github: "https://github.com/Nevin100/Baatein",
     description:
@@ -332,7 +335,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "⚡ SPARK – Bridging the Gap Between Campus & Code! 🚀",
+    title: "SPARK – Bridging the Gap Between Campus & Code!",
     image: project9,
     github: "https://github.com/Nevin100/S.P.A.R.K",
     description:
@@ -360,7 +363,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "🚀 ReactIn3D 🧠💌",
+    title: "ReactIn3D – 3D Spline Integration ",
     image: project10,
     github: "https://github.com/Nevin100/ReactIn3D",
     description:
@@ -384,7 +387,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "📊 HR Analytics Dashboard",
+    title: "HR Analytics Dashboard",
     image: project61,
     github: "#",
     description:
@@ -403,7 +406,7 @@ export const PROJECTS = [
     ],
   },
   {
-    title: "📈 Firm Financial Dashboard",
+    title: "Firm Financial Dashboard",
     image: project7,
     github: "#",
     description:
@@ -429,8 +432,15 @@ export const OpenSourceContributionsData = [
     role: "Frontend Developer",
     company: "Code Kshetra 2.0 (MLH Hackathon)",
     repo: "https://github.com/Nevin100/CodeKshetra2.0",
-    description: `Worked on the main event website, implemented animated interfaces using Tailwind and React. Collaborated with the offline team to coordinate logistics with major tech partners.`,
-    technologies: ["React.js", "TypeScript", "TailwindCSS", "Animations"],
+    description:
+      "Contributed to the official MLH-backed hackathon website by developing scalable and visually engaging frontend components. Implemented smooth animations and responsive layouts using React and Tailwind CSS, ensuring an optimized user experience for large-scale event traffic. Collaborated closely with the offline operations team to coordinate logistics with major technology partners.",
+    technologies: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "UI Animations",
+      "Responsive Design",
+    ],
     link: "https://code-kshetra2-0.vercel.app/#/",
   },
   {
@@ -438,8 +448,14 @@ export const OpenSourceContributionsData = [
     role: "Frontend Developer & Moderator",
     company: "Pears Global Hackathon",
     repo: "https://github.com/Nevin100/pears-hack-website",
-    description: `Handled frontend development and event moderation. Ensured smooth user onboarding and built dynamic event modules to streamline hackathon participation.`,
-    technologies: ["React.js", "TailwindCSS", "User Experience"],
+    description:
+      "Led frontend development and moderated participant workflows for a global-level hackathon. Built dynamic event modules and onboarding flows to streamline registrations and participation, while ensuring a seamless and accessible user experience throughout the event lifecycle.",
+    technologies: [
+      "React.js",
+      "Tailwind CSS",
+      "User Experience Design",
+      "Event Systems",
+    ],
     link: "https://pearshack.geekroom.in/",
   },
   {
@@ -447,12 +463,14 @@ export const OpenSourceContributionsData = [
     role: "Frontend Developer & Participant",
     company: "Manipal University Jaipur (MUJ)",
     repo: "https://github.com/Nevin100/MUJ-Hack-Website",
-    description: `Built a responsive hackathon website using React, TypeScript, and Tailwind during participation at MUJ Hackathon. Delivered performance-optimized components under tight deadlines.`,
+    description:
+      "Designed and developed a fully responsive hackathon website during active participation at MUJ Hackathon. Delivered performance-optimized UI components using React and TypeScript under strict deadlines, focusing on cross-device compatibility and clean frontend architecture.",
     technologies: [
       "React.js",
       "TypeScript",
-      "TailwindCSS",
-      "Responsive Design",
+      "Tailwind CSS",
+      "Responsive Web Design",
+      "Performance Optimization",
     ],
     link: "https://codemanipal.geekroom.in/#/",
   },
@@ -461,8 +479,15 @@ export const OpenSourceContributionsData = [
     role: "Frontend Developer",
     company: "Geekroom – MSIT",
     repo: "https://github.com/Nevin100/Geek-Room",
-    description: `Developed the official Geekroom website using Next.js and SASS with a focus on responsive UI, optimized structure, and seamless animations.`,
-    technologies: ["Next.js", "SASS", "TailwindCSS", "Responsiveness"],
+    description:
+      "Developed and maintained the official Geekroom website with a strong focus on responsive design, performance optimization, and scalable frontend structure. Leveraged modern frameworks and styling solutions to deliver a polished and production-ready community platform.",
+    technologies: [
+      "Next.js",
+      "SASS",
+      "Tailwind CSS",
+      "Responsive UI",
+      "Frontend Architecture",
+    ],
     link: "https://www.geekroom.in/",
   },
   {
@@ -470,17 +495,19 @@ export const OpenSourceContributionsData = [
     role: "Deputy Head & Frontend Supervisor",
     company: "GDGOC – MSIT",
     repo: "https://github.com/Nevin100/gdgoc-website",
-    description: `Led the frontend team in developing the GDGOC website using React and TailwindCSS. Oversaw animation workflows with Framer Motion and coordinated team execution across modules.`,
+    description:
+      "Led and supervised the frontend development team for the official GDGOC website. Oversaw UI architecture, animation workflows, and module-level execution using React, Tailwind CSS, and Framer Motion. Played a key role in coordinating team deliverables and maintaining high-quality engineering standards for Google-backed community initiatives.",
     technologies: [
       "React.js",
       "Framer Motion",
-      "TailwindCSS",
-      "Department Management",
-      "Team Supervision",
+      "Tailwind CSS",
+      "Team Leadership",
+      "Frontend Supervision",
     ],
     link: "https://www.gdgmsit.in/",
   },
 ];
+
 
 export const CONTACT = {
   address: "Sector 8, Dwarka, New Delhi – 110077, India",

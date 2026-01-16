@@ -7,7 +7,15 @@ import {
   FaGithub,
   FaEnvelope,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
+const navItems = [
+  "About",
+  "Technologies",
+  "Experience",
+  "Activities",
+  "Projects",
+];
 
 const socialIcons = [
   {
@@ -32,79 +40,54 @@ const socialIcons = [
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const { pathname } = useLocation();
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
 
   return (
-    <nav className="mb-20 flex items-center justify-between py-6 px-4 md:px-8 bg-transparent relative z-20">
-      {/* Logo */}
-      <div className="flex items-center">
-        <Link to={"/"}>
-          <img className="w-14" src={logo} alt="Nevin Logo" />
-        </Link>
-      </div>
-
-      {/* Desktop Menu */}
-      <div className="hidden lg:flex gap-9 items-center text-xl font-medium">
-        {["About", "Technologies", "Experience", "Activities", "Projects"].map(
-          (item) => (
-            <Link
-              key={item}
-              to={`/${item.toLowerCase()}`}
-              className="hover:text-purple-400 transition"
-            >
-              {item}
-            </Link>
-          )
-        )}
-
-        {/* Social Icons - Desktop */}
-        <div className="flex gap-4 text-2xl ml-4">
-          {socialIcons.map(({ href, label, icon, hoverColor }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              className={`transition-transform duration-300 hover:scale-110 ${hoverColor}`}
-            >
-              {icon}
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* Hamburger Icon - Mobile  */}
-      <button
-        onClick={toggleMenu}
-        className="lg:hidden text-3xl text-purple-400 focus:outline-none z-30"
-        aria-label="Toggle Menu"
+    <header className="sticky top-0 z-50">
+      <nav
+        className="mx-auto flex items-center justify-between
+                   py-4 px-4 md:px-8
+                   backdrop-blur-md bg-neutral-950/40
+                   border-b border-neutral-800 rounded-xl"
+        role="navigation"
+        aria-label="Main navigation"
       >
-        {isOpen ? <FaTimes /> : <FaBars />}
-      </button>
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Nevin Bali – Full Stack & GenAI Engineer Logo"
+            className="w-12 md:w-14"
+          />
+        </Link>
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-transparent cursor-pointer backdrop-blur-md shadow-lg flex flex-col items-center py-6 space-y-8 text-xl font-medium lg:hidden z-20">
-          {[
-            "About",
-            "Technologies",
-            "Experience",
-            "Activities",
-            "Projects",
-          ].map((item) => (
-            <Link
-              key={item}
-              to={`/${item.toLowerCase()}`}
-              className="hover:text-purple-400 transition"
-              onClick={() => setIsOpen(false)}
-            >
-              {item}
-            </Link>
-          ))}
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex items-center gap-10 text-lg font-medium">
+          {navItems.map((item) => {
+            const path = `/${item.toLowerCase()}`;
+            const isActive = pathname === path;
 
-          {/* Social Icons - Mobile */}
-          <div className="flex gap-6 text-3xl mt-3">
+            return (
+              <Link
+                key={item}
+                to={path}
+                aria-current={isActive ? "page" : undefined}
+                className={`transition-colors duration-200
+                  ${
+                    isActive
+                      ? "text-purple-400"
+                      : "text-neutral-200 hover:text-purple-400"
+                  }`}
+              >
+                {item}
+              </Link>
+            );
+          })}
+
+          {/* Social Icons */}
+          <div className="flex gap-4 text-xl ml-6">
             {socialIcons.map(({ href, label, icon, hoverColor }) => (
               <a
                 key={label}
@@ -112,15 +95,66 @@ function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className={`transition-transform duration-300 hover:scale-110 ${hoverColor}`}
+                className={`transition-transform duration-200 hover:scale-110 ${hoverColor}`}
               >
                 {icon}
               </a>
             ))}
           </div>
         </div>
+
+        {/* Mobile Toggle */}
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden text-2xl text-purple-400 focus:outline-none"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+        >
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div
+          className="lg:hidden absolute inset-x-0
+                     bg-neutral-950/80 backdrop-blur-xl
+                     border-b border-neutral-800
+                     py-8"
+          role="menu"
+        >
+          <div className="flex flex-col items-center gap-6 text-lg font-medium">
+            {navItems.map((item) => (
+              <Link
+                key={item}
+                to={`/${item.toLowerCase()}`}
+                onClick={() => setIsOpen(false)}
+                className="text-neutral-200 hover:text-purple-400 transition"
+                role="menuitem"
+              >
+                {item}
+              </Link>
+            ))}
+
+            {/* Social Icons */}
+            <div className="flex gap-6 text-2xl mt-4">
+              {socialIcons.map(({ href, label, icon, hoverColor }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className={`transition-transform duration-200 hover:scale-110 ${hoverColor}`}
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
       )}
-    </nav>
+    </header>
   );
 }
 

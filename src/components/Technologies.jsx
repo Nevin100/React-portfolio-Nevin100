@@ -114,38 +114,37 @@ export default function Technologies({ sections }) {
       ],
     },
     {
-  title: "Authentication & Security",
-  items: [
-    "JWT Authentication",
-    "Firebase Authentication",
-    "NextAuth.js",
-    "Clerk Authentication",
-    "Stack Auth",
-    "Bcrypt",
-  ],
-},
-{
-  title: "Deployment & Hosting Platforms",
-  items: [
-    "Vercel",
-    "Render",
-    "AWS",
-    "Google Cloud Platform",
-    "Docker",
-    "CI/CD (GitHub Actions)",
-  ],
-},
-{
-  title: "Backend Services & Messaging",
-  items: [
-    "REST APIs",
-    "Socket.IO",
-    "RabbitMQ",
-    "Microservices",
-    "Scalable Architectures",
-  ],
-},
-
+      title: "Authentication & Security",
+      items: [
+        "JWT Authentication",
+        "Firebase Authentication",
+        "NextAuth.js",
+        "Clerk Authentication",
+        "Stack Auth",
+        "Bcrypt",
+      ],
+    },
+    {
+      title: "Deployment & Hosting Platforms",
+      items: [
+        "Vercel",
+        "Render",
+        "AWS",
+        "Google Cloud Platform",
+        "Docker",
+        "CI/CD (GitHub Actions)",
+      ],
+    },
+    {
+      title: "Backend Services & Messaging",
+      items: [
+        "REST APIs",
+        "Socket.IO",
+        "RabbitMQ",
+        "Microservices",
+        "Scalable Architectures",
+      ],
+    },
   ];
 
   const data = sections || defaultSections;
@@ -196,8 +195,8 @@ export default function Technologies({ sections }) {
     const key = techName.toLowerCase().trim();
     if (iconMap[key]) return iconMap[key];
     const found = Object.keys(iconMap).find(
-  (k) => k.length > 2 && key.includes(k)
-);
+      (k) => k.length > 2 && key.includes(k)
+    );
 
     if (found) return iconMap[found];
     return null;
@@ -205,7 +204,7 @@ export default function Technologies({ sections }) {
 
   const initials = (name) => {
     const parts = name
-      .replace(/\(.*\)/, "") 
+      .replace(/\(.*\)/, "")
       .split(/[\s\-_/]+/)
       .filter(Boolean);
     if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
@@ -292,7 +291,7 @@ export default function Technologies({ sections }) {
                         {Icon ? (
                           <Icon className="w-6 h-6 text-purple-300" />
                         ) : (
-<HiOutlineCodeBracketSquare className="w-6 h-6 text-purple-300" />
+                          <HiOutlineCodeBracketSquare className="w-6 h-6 text-purple-300" />
                         )}
                       </span>
 

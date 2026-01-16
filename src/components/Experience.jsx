@@ -1,83 +1,122 @@
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 function Experience() {
   return (
-    <div className="border-b border-neutral-900 pb-16">
-      {/* Heading */}
-      <motion.h2
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="my-20 text-center text-5xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400 bg-clip-text text-transparent drop-shadow-md"
+    <>
+      <Helmet>
+        <title>Experience | Nevin Bali – Full Stack & GenAI Engineer</title>
+        <meta
+          name="description"
+          content="Professional experience of Nevin Bali, Full Stack Software Engineer, including SDE internships, production MVP ownership, cloud-native systems, and real-world engineering impact."
+        />
+        <meta
+          name="keywords"
+          content="Nevin Bali experience, SDE Intern, Full Stack Engineer experience, GenAI projects, Next.js FastAPI Docker"
+        />
+      </Helmet>
+
+      <section
+        id="experience"
+        className="border-b border-neutral-900 pb-16"
+        aria-labelledby="experience-heading"
       >
-        Experience
-      </motion.h2>
+        {/* Heading */}
+        <motion.h2
+          id="experience-heading"
+          role="heading"
+          aria-level="2"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -80 }}
+          transition={{ duration: 0.6 }}
+          className="my-20 text-center text-5xl md:text-6xl font-extrabold
+                     bg-gradient-to-r from-purple-400 via-pink-400 to-sky-400
+                     bg-clip-text text-transparent drop-shadow-md"
+        >
+          Professional Experience
+        </motion.h2>
 
-      {/* Experience List */}
-      <div className="px-4">
-        {EXPERIENCES.map((experience, index) => (
-          <div key={index} className="mb-12 flex flex-wrap lg:justify-center">
-            {/* Duration */}
-            <div className="w-full lg:w-1/4">
-              <motion.p
-                initial={{ x: -50, opacity: 0 }}
+        {/* Experience Timeline */}
+        <div className="px-4 max-w-6xl mx-auto">
+          {EXPERIENCES.map((experience, index) => (
+            <article
+              key={index}
+              className="mb-14 flex flex-col lg:flex-row lg:gap-12"
+              aria-label={`${experience.role} at ${experience.company}`}
+            >
+              {/* Duration */}
+              <motion.div
+                initial={{ x: -40, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="mb-2  font-medium text-lg text-neutral-400"
+                className="lg:w-1/4"
               >
-                {experience.Duration}
-              </motion.p>
-            </div>
+                <time className="text-base md:text-lg font-medium text-neutral-400">
+                  {experience.Duration}
+                </time>
+              </motion.div>
 
-            {/* Role & Company */}
-            <div className="w-full mt-2 mb-3 max-w-4xl lg:w-3/4">
-              <motion.h6
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="mb-1 text-xl font-semibold text-white"
-              >
-                {experience.role}{" "}
-                <motion.span
-                  initial={{ x: -50, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="ml-2 text-lg font-medium bg-gradient-to-r from-purple-300 via-pink-300 to-blue-400 bg-clip-text text-transparent"
-                >
-                  @ {experience.company}
-                </motion.span>
-              </motion.h6>
-
-              {/* Description */}
-              <motion.p
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.7 }}
-                className="mb-4 mt-1 text-lg text-neutral-400"
-              >
-                {experience.description}
-              </motion.p>
-
-              {/* Technologies */}
-              <div className="flex flex-wrap">
-                {experience.technologies.map((tech, i) => (
-                  <motion.span
-                    key={i}
-                    initial={{ x: -50, opacity: 0 }}
+              {/* Content */}
+              <div className="mt-3 lg:mt-0 lg:w-3/4 max-w-4xl">
+                {/* Role + Company */}
+                <header>
+                  <motion.h3
+                    initial={{ x: -40, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: i * 0.1 }}
-                    className="mr-2 mb-2 mt-1 rounded bg-neutral-800 px-3 py-1 text-sm font-medium text-purple-300"
+                    transition={{ duration: 0.5 }}
+                    className="text-xl md:text-2xl font-semibold text-white"
                   >
-                    {tech}
-                  </motion.span>
-                ))}
+                    {experience.role}
+                    <span
+                      className="ml-2 text-lg md:text-xl font-medium
+                                 bg-gradient-to-r from-purple-300 via-pink-300 to-sky-400
+                                 bg-clip-text text-transparent"
+                    >
+                      @ {experience.company}
+                    </span>
+                  </motion.h3>
+                </header>
+
+                {/* Description */}
+                <motion.p
+                  initial={{ x: -40, opacity: 0 }}
+                  whileInView={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="mt-3 mb-5 text-base md:text-lg leading-relaxed
+                             text-neutral-400"
+                >
+                  {experience.description}
+                </motion.p>
+
+                {/* Tech Stack */}
+                <div
+                  className="flex flex-wrap gap-2"
+                  role="list"
+                  aria-label="Technologies used"
+                >
+                  {experience.technologies.map((tech, i) => (
+                    <motion.span
+                      key={i}
+                      role="listitem"
+                      initial={{ y: 10, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.4, delay: i * 0.05 }}
+                      className="rounded-full bg-neutral-800/80
+                                 px-4 py-1.5 text-sm font-medium
+                                 text-purple-300 border border-neutral-700/60"
+                      title={tech}
+                    >
+                      {tech}
+                    </motion.span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }
 
