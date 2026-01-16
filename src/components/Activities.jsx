@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { OpenSourceContributionsData } from "../constants/index.js";
+import { OpenSourceContributionsData } from "../utils/index.js";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";

@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants";
+import { EXPERIENCES } from "../utils";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 

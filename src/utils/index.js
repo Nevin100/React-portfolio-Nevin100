@@ -11,6 +11,7 @@ import project9 from "../assets/projects/sparkImage.jpg";
 import project10 from "../assets/projects/9.png";
 import project11 from "../assets/projects/project11.jpg";
 import project12 from "../assets/projects/project12.jpg";
+import project13 from "../assets/projects/project13.png";
 
 import image1 from "../assets/Open/image1.jpg";
 import image2 from "../assets/Open/image-2.jpg";
@@ -90,8 +91,44 @@ export const EXPERIENCES = [
   },
 ];
 
-
 export const PROJECTS = [
+  {
+  title: "Invoicer v1 – Invoice & Finance Management Platform (Under Development)",
+  image: project13, 
+  github: "https://github.com/Nevin100/Invoicer-v1",
+  description:
+    "Invoicer v1 is a modern, full-stack invoice and finance management platform designed for freelancers and small businesses to manage invoices, expenses, payments, clients, and financial analytics from a single, responsive dashboard. The system is currently ~80–85% complete and under active development."
+      .padEnd(140, " "),
+  technologies: [
+    "Next.js (App Router)",
+    "React",
+    "TypeScript",
+    "MongoDB",
+    "Mongoose",
+    "JWT",
+    "Tailwind CSS",
+    "Recharts",
+    "Redux Toolkit",
+    "Razorpay",
+    "ExcelJS",
+  ],
+  keyFeatures: [
+    "Invoice lifecycle management with client-linked invoices",
+    "Expense tracking with category-wise analytics & insights",
+    "Interactive financial analytics dashboard (monthly & yearly)",
+    "Secure online payments using Razorpay integration",
+    "Export expenses & financial data to Excel for reporting",
+    "Fully responsive dashboard with sidebar navigation",
+  ],
+  learnings: [
+    "Designed and built a monolithic full-stack architecture using Next.js",
+    "Implemented JWT-based authentication with secure API routes",
+    "Integrated Razorpay payment flow into invoice lifecycle",
+    "Built real-time financial analytics using aggregated MongoDB data",
+    "Worked on scalable schema design with Mongoose ODM",
+  ],
+},
+
   {
     title: "InteliMail – AI Cold Email Generator",
     image: project12,

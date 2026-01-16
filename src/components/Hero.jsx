@@ -1,7 +1,8 @@
-import { HERO_CONTENT } from "../constants";
+import { HERO_CONTENT } from "../utils";
 import profilePIC from "../assets/NevinProfile.jpg";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 function Hero() {
   return (
@@ -88,18 +89,9 @@ function Hero() {
                          shadow-lg hover:opacity-90 transition flex-1 text-center"
               >
                 View Projects
+               <CiLocationArrow1 className="ml-3 text-lg text-white hover:text-gray-500 inline-block" /> 
               </a>
-
-              <a
-                href="/experience"
-                className="rounded-xl border border-neutral-700
-                         px-7 py-3 text-sm sm:text-base
-                         font-semibold text-neutral-200
-                         hover:border-purple-400 hover:text-purple-400
-                         transition flex-1 text-center"
-              >
-                Experience
-              </a>
+              
             </motion.div>
           </div>
 
