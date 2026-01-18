@@ -1,7 +1,7 @@
 # 🚀 Nevin Bali — Full Stack Engineer Portfolio
 
 Welcome to my personal developer portfolio.  
-This project represents my journey as a **Full Stack Software Engineer**, showcasing real-world projects, technical expertise, and hands-on experience with modern web technologies, cloud-native systems, and scalable application architecture.
+This project represents my journey as a **Full Stack Software Engineer**, showcasing real-world projects, technical expertise, and hands-on experience with modern web technologies, cloud systems, and scalable application architecture.
 <br/>
 <br/>
 
