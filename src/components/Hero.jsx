@@ -74,7 +74,7 @@ function Hero() {
             </motion.p>
 
             {/* CTA */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.45 }}
@@ -92,7 +92,7 @@ function Hero() {
                <CiLocationArrow1 className="ml-3 text-lg text-white hover:text-gray-500 inline-block" /> 
               </a>
               
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* IMAGE */}
